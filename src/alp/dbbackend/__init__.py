@@ -19,6 +19,7 @@ _host_adress = 'mongo_m'
 _host_port = 27017
 _db_name = 'modelization'
 _collection_name = 'models'
+_path_abstract = '/abstract_binaries/'
 
 if os.getenv("TEST_MODE") == "ON":
     _host_adress = '127.0.0.1'
@@ -34,13 +35,15 @@ if os.path.exists(_config_path):  # pragma: no cover
     _host_port = _config.get('host_port', 27017)
     _db_name = _config.get('db_name', 'modelization')
     _collection_name = _config.get('collection_name', 'models')
+    _path_abstract = _config.get('path_abstract', '/abstract_binaries/')
 
 # save config file
-_config = {'_db_engine': _db_engine,
-           '_host_adress': _host_adress,
-           '_host_port': _host_port,
-           '_db_name': _db_name,
-           '_collection_name': _collection_name}
+_config = {'db_engine': _db_engine,
+           'host_adress': _host_adress,
+           'host_port': _host_port,
+           'db_name': _db_name,
+           'collection_name': _collection_name,
+           'path_abstract': _path_abstract}
 
 with open(_config_path, 'w') as f:
     f.write(json.dumps(_config, indent=4))
