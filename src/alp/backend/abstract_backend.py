@@ -132,6 +132,5 @@ def model_from_dict_w_opt(model_dict):
     if hasattr(model_dict['config'], 'streams'):
         model['inputs'] = load_dict(model_dict['config']['streams'])
 
-
     return model
 
