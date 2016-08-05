@@ -145,7 +145,6 @@ A word on performance : so far, the measure of performance is the mean absolute 
 Fitting the model using ALP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 We then instanciate an :class:`alp.appcom.core.Experiment`:
 
 .. code-block:: python
@@ -172,7 +171,6 @@ The :meth:`alp.appcom.core.Experiment.fit_async` method send the model to the br
 Like for the fit method, the model is saved in the db along with the performance and the parameters are dumped in an HDF5 file.  
 
 
-
 Predictions using the model saved in the database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -192,9 +190,6 @@ You can now predict with your model.
 .. code-block:: python
 
     expe.predict(data['X'])
-
-
-
 
 
 .. _Keras: http://keras.io/
